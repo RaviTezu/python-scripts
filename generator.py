@@ -28,4 +28,6 @@ def genPrimes():
 primenum = genPrimes()
 print primenum.next() #prints 2
 print primenum.next() #prints 3 ... calling next() on generator will generate the primes numbers.
-            
+
+# If we were to use a generator to iterate over a million numbers, how many numbers do we need to store in memory at once?
+# Ans: 2 (current number and max number). However you will need a store all the million numbers in ram if a standard fn is used.	
