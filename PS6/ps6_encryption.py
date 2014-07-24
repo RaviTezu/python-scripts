@@ -145,7 +145,9 @@ def applyShift(text, shift):
     """
     ### TODO.
     ### HINT: This is a wrapper function.
-    return "Not yet implemented." # Remove this comment when you code the function
+    #return "Not yet implemented." # Remove this comment when you code the function
+    after_shift = applyCoder(text, buildCoder(shift))
+    return after_shift
 
 #
 # Problem 2: Decryption

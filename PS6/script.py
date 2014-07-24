@@ -20,7 +20,11 @@ def applyCoder(text, coder):
             cipher = cipher + str(coder[l])
         else:
             cipher = cipher + l
-    print cipher
+    return cipher
 
-applyCoder("Hello, world!", buildCoder(3))
-applyCoder("Khoor, zruog!", buildCoder(23))
+def applyShift(text, shift):
+    after_shift = applyCoder(text, buildCoder(shift))
+    print after_shift
+
+applyShift('This is a test.', 8)
+applyShift('Bpqa qa i bmab.', 18)
