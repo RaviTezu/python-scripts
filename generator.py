@@ -1,5 +1,10 @@
 #!/usr/bin/python
 #Write a generator, genPrimes, that returns the sequence of prime numbers on successive calls to its next() method: 2, 3, 5, 7, 11, ...
+#GENERATOR:
+
+# A generator seperates the concept of computing a very long sequence of objects, from the actual process of computing them explicitly.
+# Generators allows us to generate each new object as needed as a part of another computation, rather than computing a very long sequence
+# only to throw most of it away while you do something on an element, then repeating the process.
 
 def genPrimes():
     num = 2
