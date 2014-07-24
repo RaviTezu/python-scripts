@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #Write a generator, genPrimes, that returns the sequence of prime numbers on successive calls to its next() method: 2, 3, 5, 7, 11, ...
 
-def gnePrimes():
+def genPrimes():
     num = 2
     prime = True
     while True:
@@ -16,6 +16,11 @@ def gnePrimes():
             prime = True           
 
 
-for i in gnePrimes():
-    print i
+#Any definition having a yield statement is called a generator.
+#Rather than generating a list of prime numbers upto some point, stop and return it. Using a generator will help you generate every prime
+#number on the fly, as you need them. 
+
+primenum = genPrimes()
+print primenum.next() #prints 2
+print primenum.next() #prints 3 ... calling next() on generator will generate the primes numbers.
             
