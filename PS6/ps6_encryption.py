@@ -169,7 +169,7 @@ def findBestShift(wordList, text):
     max1 = 0
     for k,v in as_sen.iteritems():
         c = 0
-        print v
+        #print v
         for w in v[0].split(" "):
             if isWord(wordList, w):
                 c = c + 1
@@ -192,7 +192,7 @@ def decryptStory():
     #return "Not yet implemented." # Remove this comment when you code the function
     w = getStoryString()
     x = findBestShift(wordList, w)
-    print x
+    return applyShift(w, x)
 
 #
 # Build data structures used for entire session and run encryption
