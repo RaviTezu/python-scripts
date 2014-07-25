@@ -147,7 +147,7 @@ def applyShift(text, shift):
     ### HINT: This is a wrapper function.
     #return "Not yet implemented." # Remove this comment when you code the function
     after_shift = applyCoder(text, buildCoder(shift))
-    return after_shift
+    return after_shift 
 
 #
 # Problem 2: Decryption
@@ -160,7 +160,24 @@ def findBestShift(wordList, text):
     returns: 0 <= int < 26
     """
     ### TODO
-    return "Not yet implemented." # Remove this comment when you code the function
+    #return "Not yet implemented." # Remove this comment when you code the function
+    as_sen = {}
+    shift = 0 
+    for s in range(26):
+        tt = applyShift(text, s)
+        as_sen[s] = [tt]
+    max1 = 0
+    for k,v in as_sen.iteritems():
+        c = 0
+        print v
+        for w in v[0].split(" "):
+            if isWord(wordList, w):
+                c = c + 1
+        if c > max1:
+           max1 = c 
+           shift = k
+        as_sen[k] = c
+    return shift
 
 def decryptStory():
     """
@@ -181,8 +198,11 @@ def decryptStory():
 if __name__ == '__main__':
     # To test findBestShift:
     wordList = loadWords()
-    s = applyShift('Hello, world!', 8)
+    #s = applyShift('Hello, world!', 8)
+    s = "icwid jfxyxc hUUzwT"
     bestShift = findBestShift(wordList, s)
+    print bestShift
+    print applyShift(s, bestShift)
     assert applyShift(s, bestShift) == 'Hello, world!'
     # To test decryptStory, comment the above four lines and uncomment this line:
     #    decryptStory()
