@@ -58,18 +58,23 @@ class NewsStory(object):
         self.link    = link
 
     def getGuid(self):
+        """Return the guid"""
         return self.guid
 
     def getTitle(self):
+        """Return the title"""
         return self.title
 
     def getSubject(self):
+        """Return the subject"""
         return self.subject
    
     def getSummary(self):
+        """Return the summary"""
         return self.summary
    
     def getLink(self):
+        """Return the link"""
         return self.link
     
 #======================
