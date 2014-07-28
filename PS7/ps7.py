@@ -94,25 +94,79 @@ class Trigger(object):
 # Problems 2-5
 
 # TODO: WordTrigger
+class WordTrigger(Trigger):
+    """ WordTrigger class """
+    def __init__(self, word):
+        """Constructor of WordTrigger class"""
+        self.word = word
+    
+    def isWordIn(self, text):
+        """ Returns True if the word is present in text.
+            Else return False"""
+        w = self.word.strip(string.punctuation)
+        #print w, text
+        return w.lower() in [s.strip(string.punctuation).replace("'s","").lower() for s in text.split(" ")]
 
 # TODO: TitleTrigger
+class TitleTrigger(WordTrigger):
+    """ TitleTrigger class """
+    def evaluate(self, story):
+        """ evaluate method of TitleTrigger class"""
+        return self.isWordIn(story.getTitle())
+
 # TODO: SubjectTrigger
+class SubjectTrigger(WordTrigger):
+    """ SubjectTrigger class """
+    def evaluate(self, story):
+        """ evaluate method of SubjectTrigger class"""
+        return self.isWordIn(story.getSubject())
+
 # TODO: SummaryTrigger
+class SummaryTrigger(WordTrigger):
+    """ SummaryTrigger class """
+    def evaluate(self, story):
+        """ evaluate method of SummaryTrigger class"""
+        return self.isWordIn(story.getSummary())
 
 
 # Composite Triggers
 # Problems 6-8
 
 # TODO: NotTrigger
+class NotTrigger(Trigger):
+    """class NotTrigger"""
+    def __init__(self, t1):
+        self.t1 = t1
+
+    def evaluate(self, story):
+        return not self.t1.evaluate(story)
+
 # TODO: AndTrigger
+class AndTrigger(Trigger):
+    def __init__(self, t1, t2):
+        self.t1 = t1
+        self.t2 = t2
+    def evaluate(self, story):
+        return self.t1.evaluate(story) and self.t2.evaluate(story)
+
 # TODO: OrTrigger
 
+class OrTrigger(Trigger):
+    def __init__(self, t1, t2):
+        self.t1 = t1
+        self.t2 = t2
+    def evaluate(self, story):
+        return self.t1.evaluate(story) or self.t2.evaluate(story)
 
 # Phrase Trigger
 # Question 9
 
 # TODO: PhraseTrigger
-
+class PhraseTrigger(Trigger):
+    def __init__(self, phrase):
+        self.phrase = phrase
+    def evaluate(self, story):
+        return self.phrase in story
 
 #======================
 # Part 3
