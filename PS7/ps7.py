@@ -166,7 +166,7 @@ class PhraseTrigger(Trigger):
     def __init__(self, phrase):
         self.phrase = phrase
     def evaluate(self, story):
-        return self.phrase in story
+        return self.phrase in story.getSubject() or self.phrase in story.getSummary() or self.phrase in story.getTitle()
 
 #======================
 # Part 3
