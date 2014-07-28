@@ -181,8 +181,12 @@ def filterStories(stories, triggerlist):
     """
     # TODO: Problem 10
     # This is a placeholder (we're just returning all the stories, with no filtering) 
-    return stories
-
+    fstories = []
+    for story in stories:
+        for trigger in triggerlist:
+            if trigger.evaluate(story) and story not in fstories:
+                fstories.append(story)
+    return fstories             
 #======================
 # Part 4
 # User-Specified Triggers
