@@ -2,15 +2,15 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-x = range(31)
-p1 = [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1]
-p2 = [0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,0,2,2,2,0,2]
-p3 = [0,0,3,0,0,3,0,0,0,0,3,0,0,0,0,0,0,0,3,0,3,0,0,3,3,3,3,0,0,0,3]
-p4 = [0,0,4,0,4,0,4,0,0,0,0,0,0,4,4,4,4,4,0,4,0,4,0,0,0,0,0,0,4,4,0]
-plt.scatter(x, p1)
-plt.scatter(x, p2)
-plt.scatter(x, p3)
-plt.scatter(x, p4)
+x = range(1, 31)
+p1 = ["",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1]
+p2 = [0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,0,2,2,2,0,2]
+p3 = [0,3,0,0,3,0,0,0,0,3,0,0,0,0,0,0,0,3,0,3,0,0,3,3,3,3,0,0,0,3]
+p4 = [0,4,0,4,0,4,0,0,0,0,0,0,4,4,4,4,4,0,4,0,4,0,0,0,0,0,0,4,4,0]
+plt.scatter(x, p1,color="green",s=100)
+plt.scatter(x, p2,color="red",s=100)
+plt.scatter(x, p3,color="blue",s=100)
+plt.scatter(x, p4,color="yellow",s=100)
 plt.xticks(np.arange(min(x), max(x)+1, 1.0))
-plt.legend(['Project-1', 'Project-2', 'Project-3', 'Project-4'], loc='upper left')
+#plt.legend(['Project-1', 'Project-2', 'Project-3', 'Project-4'], loc='upper left')
 plt.show()
