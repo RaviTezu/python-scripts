@@ -1,13 +1,6 @@
-WWStay programming test [ravi-teja@live.com]
-Finish Test
-01:50:09 left
-2 questions Max. Score 200.0
-2 Programming Questions
-1.Unique dice game
-2.The smallest path - 1
-2.
-The smallest path - 1
-Max. Score 100
+The smallest path:
+==================
+
 Maga gives a hard problem to Alex. And Alex couldn't solve yet. Could you help him?
 
 The grid is n by m. Each cell contains a unique number on it. Maga is at the left-top and wants to go to right-bottom. But there is a condition. Maga can go through only two way - right and down. And the path of your move is called the nodes you have passed through over them. The path is called the most beautiful if the following condition is satisfied: The sorted of the path has to be lexicographic smallest as possible as. Output the most beautiful path for given grid.
@@ -22,74 +15,13 @@ Contraints:
 1 <= n,m <= 1000
 1 <= A[i][j] <= n*m, All of the numbers in the grid are unique.
 
-Sample Input (Plaintext Link)
+Sample Input (Plaintext Link):
 2 2
 4 2
 3 1
-Sample Output (Plaintext Link)
+
+Sample Output (Plaintext Link):
 1 2 4
-Explanation
+
+Explanation:
 There are 2 ways to reach at (2,2) cell. The pathes are 4, 3, 1 or 4, 2, 1 respectively. So The most beautiful of them is 4, 2, 1 because if looking the sorted of them it looks like these : 1, 3, 4 and 1, 2, 4 respectively. So 1, 2, 4 is lexicographic smaller than the other. So the ans is 1 2 4.
-Time Limit: 1 sec(s) for each input file.
-Memory Limit: 256 MB
-Source Limit: 1024 KB
-Scoring: Score is assigned in case any testcase passes.
-SUBMISSIONS
-+ New Submission
-All Submissions
-Save
-CC++ClojureGoHaskellJavaPerlPHPPythonRuby
-
-1
-2
-3
-4
-5
-6
-7
-8
-'''
-# Read input from stdin and provide input before running code
-name = raw_input('What is your name?\n')
-print 'Hi, %s.' % name
-'''
-print 'Hello World!'
-1:1
-Submit Compile & Test Provide custom input
-SUBMISSION RESULT
-Submission ID: 1097456
-3 seconds ago
-Result
-100
-Score
-100
-Time (sec)
-1.0058
-Memory (KiB)
-64
-Language
-Python
-Result	Score	Time (sec)	Memory (KiB)	Match %
-Input #1	
-10	0.1006	64	100.00 %
-Input #2	
-10	0.1006	64	100.00 %
-Input #3	
-10	0.1006	64	100.00 %
-Input #4	
-10	0.1005	64	100.00 %
-Input #5	
-10	0.1006	64	100.00 %
-Input #6	
-10	0.1006	64	100.00 %
-Input #7	
-10	0.1006	64	100.00 %
-Input #8	
-10	0.1006	64	100.00 %
-Input #9	
-10	0.1006	64	100.00 %
-Input #10	
-10	0.1005	64	100.00 %
-Compilation Log
-No compilation log for this submission.
-
